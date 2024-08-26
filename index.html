@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Interpretación de Toxoplasma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .calculator {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Interpretación de las pruebas serológicas para Toxoplasma</h2>
+        <label for="igg">Seleccione el resultado de IgG:</label>
+        <select id="igg">
+            <option value="Negativo">Negativo</option>
+            <option value="Dudosos">Dudosos</option>
+            <option value="Positiva">Positiva</option>
+        </select>
+        
+        <label for="igm">Seleccione el resultado de IgM:</label>
+        <select id="igm">
+            <option value="Negativo">Negativo</option>
+            <option value="Dudosos">Dudosos</option>
+            <option value="Positiva">Positiva</option>
+        </select>
+        
+        <button onclick="interpretar()">Interpretar</button>
+        
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script>
+        function interpretar() {
+            const igg = document.getElementById('igg').value;
+            const igm = document.getElementById('igm').value;
+            let interpretacion = '';
+
+            if (igg === 'Negativo' && igm === 'Negativo') {
+                interpretacion = 'Sin evidencia de infección';
+            } else if (igg === 'Negativo' && igm === 'Dudosos') {
+                interpretacion = 'Posible infección temprana o resultado falso positivo para IgM';
+            } else if (igg === 'Negativo' && igm === 'Positiva') {
+                interpretacion = 'Posible infección aguda o resultado falso positivo para IgM';
+            } else if (igg === 'Dudosos' && igm === 'Negativo') {
+                interpretacion = 'Crónica indeterminada';
+            } else if (igg === 'Dudosos' && igm === 'Dudosos') {
+                interpretacion = 'Crónica indeterminada';
+            } else if (igg === 'Dudosos' && igm === 'Positiva') {
+                interpretacion = 'Posible infección aguda';
+            } else if (igg === 'Positiva' && igm === 'Negativo') {
+                interpretacion = 'Infección durante ≥ 6 meses';
+            } else if (igg === 'Positiva' && igm === 'Dudosos') {
+                interpretacion = 'Infección probablemente > 1 año o resultado falso positivo para IgM';
+            } else if (igg === 'Positiva' && igm === 'Positiva') {
+                interpretacion = 'Posible infección reciente en los últimos 12 meses, o resultado falso positivo para IgM';
+            } else {
+                interpretacion = 'Resultados ambiguos o interpretación incierta. Se recomienda realizar pruebas adicionales.';
+            }
+
+            document.getElementById('resultado').innerText = interpretacion;
+        }
+    </script>
+</body>
+</html>
