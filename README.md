@@ -10,5 +10,9 @@ Esta calculadora es una herramienta en línea gratuita diseñada por un estudian
 
 Siempre consulte a un médico o profesional de la salud calificado para obtener un diagnóstico preciso y consejos de tratamiento basados en su situación específica. El uso de esta calculadora es bajo su propio riesgo, y no asumimos ninguna responsabilidad por decisiones tomadas basadas en sus resultados.
 
+Diseñado por: George J. Frech, H.
+Estudiante de la Universidad de Oriente, Nucleo Anzoategui, Medicina.
+Fecha: 26/08/2024
+
 Fuente: https://www.msdmanuals.com/es-ve/professional/multimedia/table/interpretaci%C3%B3n-de-las-pruebas-serol%C3%B3gicas-para-toxoplasma
 Adaptado de: https://www.cdc.gov/dpdx/toxoplasmosis/index.html
