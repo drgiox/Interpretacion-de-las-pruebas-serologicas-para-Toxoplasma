@@ -1,4 +1,4 @@
-# Interpretation-de-las-pruebas-serologicas-para-Toxoplasma
+# Interpretacion-de-las-pruebas-serologicas-para-Toxoplasma
 
 **Uso de la calculadora**
 
